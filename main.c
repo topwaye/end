@@ -1,7 +1,7 @@
-/*
+﻿/*
  * main.c
  *
- * Copyright (C) 2025.12.30 TOP WAYE topwaye@hotmail.com
+ * Copyright (C) 2025.12.31 TOP WAYE topwaye@hotmail.com
  * 
  * distributed computer front-end and back-end model to show what Vue is
  */
@@ -17,19 +17,25 @@ int back_end ( int n )
 /* Vue */
 int front_end ( int n )
 {
-	printf ( "%d\n", n );
 	return n;
+}
+
+/* <div> a </div> */
+void component ( int a )
+{
+	printf ( "%d\n", a );
 }
 
 /* Html */
 int main ( )
 {
-	/* <html> */
-	int a, b;
+	int a;
 
 	/* <javascript> */
 	a = front_end ( back_end ( 0 ) );
-	b = front_end ( back_end ( 1 ) );
+
+	/* <div> a </div> */
+	component ( a );
 
 	return 1;
 }
